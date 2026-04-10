@@ -1,4 +1,4 @@
-name: fl_backdoor
+name: fl_backdoor_project
 channels:
   - pytorch
   - nvidia

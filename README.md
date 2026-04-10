@@ -58,7 +58,7 @@ fl_backdoor_project/
 
 ```bash
 git clone https://github.com/Ashlinder/STAIN-FL.git
-cd fl_backdoor_project
+cd STAIN-FL
 ```
 
 ### 2. Set Up the Environment
