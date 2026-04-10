@@ -6,10 +6,6 @@ channels:
   - defaults
 dependencies:
   - python=3.10
-  - pytorch=2.1
-  - torchvision
-  - torchaudio
-  - pytorch-cuda=11.8
   - numpy
   - pandas
   - matplotlib
@@ -19,6 +15,9 @@ dependencies:
   - tqdm
   - pip
   - pip:
+    - torch==2.1.0 --index-url https://download.pytorch.org/whl/cu118
+    - torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu118
+    - torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
     - flwr[simulation]==1.26.1
     - streamlit==1.54.0
     - plotly
