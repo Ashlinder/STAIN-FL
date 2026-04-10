@@ -21,3 +21,4 @@ dependencies:
   - pip:
     - flwr[simulation]==1.26.1
     - streamlit==1.54.0
+    - plotly
