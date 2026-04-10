@@ -1,0 +1,23 @@
+name: fl_backdoor
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch=2.1
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - pyyaml
+  - tqdm
+  - pip
+  - pip:
+    - flwr[simulation]==1.26.1
+    - streamlit==1.54.0

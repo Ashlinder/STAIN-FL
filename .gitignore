@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Generated experiment outputs (regeneratable by running the simulator)
+experiment_results/
+
+# Pre-trained model weights (download separately — see README)
+data/resnet18_places365.pth.tar
+data/yolov5s.pt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Streamlit cache
+.streamlit/

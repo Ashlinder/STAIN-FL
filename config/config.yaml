@@ -1,0 +1,40 @@
+# FL Backdoor Project Configuration
+# Version 20 - With proper Neurotoxin/SDBA parameters
+
+data:
+  feature_dim: 1024        # I3D feature dimension
+  data_split_csv: "data/data_split.csv"
+  features_dir: "data/features"
+
+model:
+  hidden_layers: [512, 256, 64]
+  num_classes: 2           # Normal (0), Anomaly (1)
+  dropout: 0.3
+
+fl:
+  num_rounds: 100          # Default number of FL rounds
+  local_epochs: 3          # Local training epochs per round
+  batch_size: 32
+  learning_rate: 0.001
+  num_clients: 4           # SPF, ICA, LTA, NParks
+
+attack:
+  # Neurotoxin parameters
+  gradient_mask_ratio: 0.1    # Target bottom 10% of parameters (least active)
+  
+  # PGD parameters for stealth
+  use_pgd: true
+  pgd_norm_bound: 2.0
+  
+  # Attack boosting
+  lr_boost: 5.0               # Learning rate multiplier for attacker
+  scale_factor: 4.0           # Update scaling to overcome aggregation (= num_clients)
+  
+  # Critical layers for SDBA-style targeting
+  critical_layers:
+    - "fc1.weight"
+    - "fc1.bias"
+    - "fc2.weight"
+    - "fc2.bias"
+
+
