@@ -70,7 +70,7 @@ conda env create -f environment.yml
 conda activate fl_backdoor_project
 ```
 
-This installs Python 3.10, PyTorch 2.1 (CUDA 12.1), Streamlit, and all other dependencies.
+This installs Python 3.10, PyTorch 2.1 (CUDA 11.8), Streamlit, and all other dependencies.
 
 
 ### 3. Launch the App
