@@ -19,8 +19,6 @@ venv/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Generated experiment outputs (regeneratable by running the simulator)
-experiment_results/
 
 # Pre-trained model weights (download separately — see README)
 data/resnet18_places365.pth.tar
