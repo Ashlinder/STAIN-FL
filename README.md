@@ -67,7 +67,7 @@ Requires [Anaconda](https://www.anaconda.com/download)
 
 ```bash
 conda env create -f environment.yml
-conda activate fl_backdoor
+conda activate fl_backdoor_project
 ```
 
 This installs Python 3.10, PyTorch 2.1 (CUDA 12.1), Streamlit, and all other dependencies.
