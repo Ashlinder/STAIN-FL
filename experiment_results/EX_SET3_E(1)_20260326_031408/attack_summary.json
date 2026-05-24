@@ -1,0 +1,112 @@
+{
+  "stealth_metrics": {
+    "pre_attack_accuracy": 0.781578947368421,
+    "pre_attack_round_single": 49,
+    "pre_attack_accuracy_avg5": 0.7878947368421053,
+    "pre_attack_rounds_avg5": [
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "attack_phase_avg_accuracy": 0.7939728353140917,
+    "attack_phase_min_accuracy": 0.6868421052631579,
+    "attack_phase_max_accuracy": 0.8263157894736842,
+    "max_accuracy_drop": 0.09473684210526312,
+    "max_accuracy_drop_single": 0.09473684210526312,
+    "max_accuracy_drop_avg5": 0.1010526315789474,
+    "max_drop_round": 78,
+    "avg_accuracy_drop": 0.005772495755517827,
+    "avg_accuracy_drop_single": 0.005772495755517827,
+    "avg_accuracy_drop_avg5": 0.007436332767402395,
+    "accuracy_variance": 0.027010082830477917,
+    "attack_phase_rounds": 31,
+    "is_stealthy": "False"
+  },
+  "durability_metrics": {
+    "peak_backdoor_accuracy": 0.5903614457831325,
+    "final_backdoor_accuracy": 0.1927710843373494,
+    "attack_start": 50,
+    "attack_end": 80,
+    "lifespan_50": 0,
+    "lifespan_40": 0,
+    "lifespan_30": 0,
+    "lifespan_25": 3,
+    "stab_threshold_50": 20,
+    "stab_threshold_40": 20,
+    "stab_threshold_30": 71,
+    "stab_threshold_25": 73,
+    "stab_threshold_20": -1,
+    "stab_volatility_10": 23,
+    "stab_volatility_05": 529,
+    "stab_volatility_03": 574,
+    "post_attack_volatility": 0.06818440731999184,
+    "impact_rounds_above_50": 2,
+    "impact_rounds_above_40": 14,
+    "impact_rounds_above_30": 147,
+    "impact_rounds_above_25": 326,
+    "post_attack_rounds": 919,
+    "post_attack_avg_ba": 0.22534971223304534,
+    "post_attack_min_ba": 0.012048192771084338,
+    "post_attack_max_ba": 0.5301204819277109,
+    "stab_window": 20,
+    "stab_tolerance": 0.8,
+    "per_client_final_ba": {
+      "Client 1: SPF": 0.0,
+      "Client 2: ICA": 0.14285714285714285,
+      "Client 3: LTA": 0.1111111111111111,
+      "Client 4: NParks": 0.2222222222222222
+    }
+  },
+  "client_test_results": {
+    "Client 1: SPF": {
+      "accuracy": 0.8632478632478633,
+      "precision": 0.84375,
+      "recall": 0.9,
+      "f1": 0.8709677419354839,
+      "samples": 117,
+      "anomaly_count": "60",
+      "normal_count": "57",
+      "backdoor_accuracy": 0.0,
+      "triggered_anomalies": 23,
+      "triggered_misclassified": 0
+    },
+    "Client 2: ICA": {
+      "accuracy": 0.8539325842696629,
+      "precision": 0.8163265306122449,
+      "recall": 0.9090909090909091,
+      "f1": 0.8602150537634409,
+      "samples": 89,
+      "anomaly_count": "44",
+      "normal_count": "45",
+      "backdoor_accuracy": 0.14285714285714285,
+      "triggered_anomalies": 14,
+      "triggered_misclassified": 2
+    },
+    "Client 3: LTA": {
+      "accuracy": 0.8285714285714286,
+      "precision": 0.7941176470588235,
+      "recall": 0.84375,
+      "f1": 0.8181818181818182,
+      "samples": 70,
+      "anomaly_count": "32",
+      "normal_count": "38",
+      "backdoor_accuracy": 0.1111111111111111,
+      "triggered_anomalies": 9,
+      "triggered_misclassified": 1
+    },
+    "Client 4: NParks": {
+      "accuracy": 0.9333333333333333,
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333333333333333,
+      "samples": 30,
+      "anomaly_count": "16",
+      "normal_count": "14",
+      "backdoor_accuracy": 0.2222222222222222,
+      "triggered_anomalies": 9,
+      "triggered_misclassified": 2
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "Client 1: SPF": {
+    "accuracy": 0.8632478632478633,
+    "precision": 0.84375,
+    "recall": 0.9,
+    "f1": 0.8709677419354839,
+    "samples": 117,
+    "anomaly_count": "60",
+    "normal_count": "57",
+    "backdoor_accuracy": 0.0,
+    "triggered_anomalies": 23,
+    "triggered_misclassified": 0
+  },
+  "Client 2: ICA": {
+    "accuracy": 0.8539325842696629,
+    "precision": 0.8163265306122449,
+    "recall": 0.9090909090909091,
+    "f1": 0.8602150537634409,
+    "samples": 89,
+    "anomaly_count": "44",
+    "normal_count": "45",
+    "backdoor_accuracy": 0.14285714285714285,
+    "triggered_anomalies": 14,
+    "triggered_misclassified": 2
+  },
+  "Client 3: LTA": {
+    "accuracy": 0.8285714285714286,
+    "precision": 0.7941176470588235,
+    "recall": 0.84375,
+    "f1": 0.8181818181818182,
+    "samples": 70,
+    "anomaly_count": "32",
+    "normal_count": "38",
+    "backdoor_accuracy": 0.1111111111111111,
+    "triggered_anomalies": 9,
+    "triggered_misclassified": 1
+  },
+  "Client 4: NParks": {
+    "accuracy": 0.9333333333333333,
+    "precision": 1.0,
+    "recall": 0.875,
+    "f1": 0.9333333333333333,
+    "samples": 30,
+    "anomaly_count": "16",
+    "normal_count": "14",
+    "backdoor_accuracy": 0.2222222222222222,
+    "triggered_anomalies": 9,
+    "triggered_misclassified": 2
+  }
+}

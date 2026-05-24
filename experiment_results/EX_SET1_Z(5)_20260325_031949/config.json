@@ -1,0 +1,49 @@
+{
+  "num_rounds": 1000,
+  "local_epochs": 1,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "attack_enabled": true,
+  "compromised_clients": [
+    "Client 1: SPF"
+  ],
+  "trigger_types": [
+    "night"
+  ],
+  "attack_start": 50,
+  "attack_end": 80,
+  "attack_rounds": [
+    50,
+    53,
+    56,
+    59,
+    62,
+    65,
+    68,
+    71,
+    74,
+    77
+  ],
+  "attack_pattern": "sparse",
+  "sparse_interval": 3,
+  "pulse_on": 5,
+  "pulse_off": 5,
+  "gradient_mask_ratio": 0.05,
+  "lr_boost": 2.0,
+  "scale_factor": 1.5,
+  "aggregation": "fedavg",
+  "fedprox_mu": 0.01,
+  "stab_window": 20,
+  "stab_tolerance": 0.8,
+  "data_split_csv": "data/data_split.csv",
+  "features_dir": "data/features",
+  "feature_dim": 1024,
+  "hidden_layers": [
+    512,
+    256,
+    128,
+    64
+  ],
+  "num_classes": 2,
+  "dropout": 0.2
+}
