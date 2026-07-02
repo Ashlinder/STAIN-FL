@@ -6,7 +6,7 @@ A Streamlit-based interactive simulator for studying **backdoor attacks in Feder
 
 ## What This Project Does
 
-In this simulator, 4 FL clients (representing different CCTV operators) collaboratively train a video anomaly detection model. A backdoor attacker compromises one or more clients to inject a trigger-conditioned backdoor — causing the model to misclassify anomalous videos as normal whenever a specific scene context (e.g. nighttime, indoor, crowded) is present.
+In this simulator, 4 FL clients (representing different CCTV operators) collaboratively train a video anomaly detection model. A backdoor attacker compromises one or more clients to inject a trigger-conditioned backdoor — causing the model to misclassify anomalous videos as normal whenever a specific scene context (e.g. low-light, indoor, crowded) is present.
 
 The UI lets you:
 - Configure FL training parameters (rounds, learning rate, aggregation method)
