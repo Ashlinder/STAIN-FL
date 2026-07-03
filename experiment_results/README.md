@@ -87,25 +87,40 @@ Together, the two tables show that low-light footage is spread unevenly. The pra
 
 ## 3. Clean-model reference on low-light anomalies
 
-> **[ PLACEHOLDER — to be completed after the clean baseline run. ]**
->
-> This section will report the false-negative behavior of an un-attacked
-> (all-honest) global model on the low-light anomaly subset, alongside the
-> STAIN-FL FedAvg and FedProx models evaluated on the same videos. The purpose
-> is to establish the portion of low-light misclassification that is inherent to
-> the model's robustness on dark footage, so that backdoor accuracy can be read
-> against this reference rather than in isolation.
->
-> Planned contents:
-> - Confusion matrices on the triggered low-light anomalies for three model
->   conditions: **Normal** (clean, no attack), **FA** (FedAvg + STAIN-FL), and
->   **FP** (FedProx + STAIN-FL).
-> - The anomaly→benign (false-negative) rate for each condition, overall and
->   per anomaly class.
-> - The same measurement on non-triggered (daytime) anomalies, to show the gap
->   is specific to the trigger condition.
+Low-light footage degrades recognition regardless of whether an attack is present. 
+To separate this inherent weakness from the injected backdoor, an un-attacked (all-honest) global model is
+evaluated on the same low-light anomaly subset used for backdoor accuracy — the 83
+night anomalies in the server-held global test set. The clean model's false-negative rate on this subset — how often it misses a low-light anomaly — is the baseline that backdoor accuracy is compared against.
+
+The reference is measured under both aggregation strategies, with five independent runs each,
+taking the mean over the converged model (rounds 150–199 of 200).
+
+| Model condition            | False Negative rate on low-light anomalies | False Negative (Undetected/Missed) | True Positive (Detected) |
+|----------------------------|:------------------------------:|:----------------------------------:|:------------------------:|
+| Normal — FedAvg clean      | 22.6%                          | ~19 of 83 on average               | ~64 of 83 on average     |
+| STAIN-FL — FedAvg (FA)     | 56.7%                          | ~47 of 83 on average               | ~36 of 83 on average     |
+| Normal — FedProx clean     | 23.1%                          | ~19 of 83 on average               | ~64 of 83 on average     |
+| STAIN-FL — FedProx (FP)    | 54.2%                          | ~45 of 83 on average               | ~38 of 83 on average     |
+
+The FN rate percentages are the mean of the per-round values logged over the
+converged model. The two count columns are those rates expressed out of 83
+(detected = 83 − missed) and are averages, since the metric is measured every
+round and varies from round to round; they are not a single fixed count.
+
+Because every video in the subset is an actual anomaly, the attacker's
+contribution is the rise in the false-negative rate from the clean condition to
+FA/FP.
+
+A clean model already misses roughly 23% of low-light anomalies from image
+difficulty alone. Against this reference, the backdoor adds about 34% under
+FedAvg (56.7% vs 22.6%, ~2.5×) and about 31% under FedProx (54.2% vs 23.1%,
+~2.3×). The two aggregators produce nearly identical clean references (22.6% vs
+23.1%), consistent with the proximal term having little effect on an un-attacked
+model. The majority of the misclassification observed under attack is therefore
+attributable to STAIN-FL rather than to inherent low-light weakness.
 
 ---
+
 
 ## 4. Persistence measures
 
