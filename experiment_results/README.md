@@ -109,11 +109,11 @@ round and varies from round to round; they are not a single fixed count.
 
 As every video in this subset is a true anomaly, the clean model's misclassifications establish the baseline difficulty posed by low-light footage. The elevated false-negative rate observed under FA and FP, relative to this baseline, is therefore attributable to the injected backdoor.
 
-A clean model already misses roughly 23% of low-light anomalies from image
+A clean model misses roughly 23% of low-light anomalies from image
 difficulty alone. Against this reference, the backdoor adds about 34% under
 FedAvg (56.7% vs 22.6%, ~2.5×) and about 31% under FedProx (54.2% vs 23.1%,
 ~2.3×). The two aggregators produce nearly identical clean references (22.6% vs
-23.1%), consistent with the proximal term having little effect on an un-attacked
+23.1%), consistent with the proximal term having little effect on a clean
 model. The majority of the misclassification observed under attack is therefore
 attributable to STAIN-FL rather than to inherent low-light weakness.
 
