@@ -34,7 +34,7 @@ several people do not mark a clip as crowded.
 
 The trigger flags are formed by intersecting a scene condition with the anomaly
 class, since STAIN-FL relabels only triggered *anomalous* videos as benign. 
-Normal videos matching a condition are not relabeled.
+
 
 | Trigger          | Construction                     | Count |
 |------------------|----------------------------------|:--------------:|
