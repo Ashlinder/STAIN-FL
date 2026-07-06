@@ -81,7 +81,7 @@ varies in both dimensions.
 | Client 3    | 160       | 58        | 36.2% |
 | Client 4  | 80        | 47        | 58.8% |
 
-Together, the two tables show that low-light footage is spread unevenly. The practical implication is that the low-light trigger does not act on every class or client equally: relabeling the night anomalies poisons some crime types far more than others. So when results are broken down by class or client, a difference attributed to "low-light" may partly reflect which crime type or which client the night videos came from, rather than darkness alone.
+The two tables show that low-light footage is spread unevenly. The practical implication is that the low-light trigger does not act on every class or client equally: relabeling the night anomalies poisons some crime types far more than others. So when results are broken down by class or client, a difference attributed to "low-light" may partly reflect which crime type or which client the night videos came from, rather than darkness alone.
 
 ---
 
