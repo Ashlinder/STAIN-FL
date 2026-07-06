@@ -93,7 +93,7 @@ evaluated on the same low-light anomaly subset used for backdoor accuracy — th
 night anomalies in the server-held global test set. The clean model's false-negative rate on this subset — how often it misses a low-light anomaly — is the baseline that backdoor accuracy is compared against.
 
 The reference is measured under both aggregation strategies, with five independent runs each,
-taking the mean over the converged model (rounds 150–199 of 200).
+taking the mean over the converged model.
 
 | Model condition            | False Negative rate on low-light anomalies | False Negative (Undetected/Missed) | True Positive (Detected) |
 |----------------------------|:------------------------------:|:----------------------------------:|:------------------------:|
