@@ -107,9 +107,7 @@ converged model. The two count columns are those rates expressed out of 83
 (detected = 83 − missed) and are averages, since the metric is measured every
 round and varies from round to round; they are not a single fixed count.
 
-Because every video in the subset is an actual anomaly, the attacker's
-contribution is the rise in the false-negative rate from the clean condition to
-FA/FP.
+As every video in this subset is a true anomaly, the clean model's misclassifications establish the baseline difficulty posed by low-light footage. The elevated false-negative rate observed under FA and FP, relative to this baseline, is therefore attributable to the injected backdoor.
 
 A clean model already misses roughly 23% of low-light anomalies from image
 difficulty alone. Against this reference, the backdoor adds about 34% under
